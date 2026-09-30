@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BITO Sponsor-Podest 2027</title>
+<meta name="description" content="Das BITO-Sponsorenpodest des MCC in Originalgröße als AR im eigenen Raum ansehen.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500&display=swap">
+<script type="module" src="https://unpkg.com/@google/model-viewer@3.5.0/dist/model-viewer.min.js"></script>
+<style>
+:root {
+  --bg: #eef1f1; --surface: #ffffff; --fg: #152323; --muted: #5b6b6b; --line: #d3dcdc;
+  --accent: #006666; --accent-fg: #ffffff; --gold: #a8801f;
+  --stage: radial-gradient(ellipse at 50% 70%, #ffffff 0%, #dde4e4 70%);
+  --f-display: "Barlow Condensed", "Arial Narrow", sans-serif;
+  --f-body: "Barlow", "Segoe UI", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root {
+  --bg: #0f1717; --surface: #162121; --fg: #e6eeee; --muted: #93a6a6; --line: #273636;
+  --accent: #2a9d9d; --accent-fg: #061212; --gold: #d9b45a;
+  --stage: radial-gradient(ellipse at 50% 70%, #2b3a3a 0%, #121b1b 72%); color-scheme: dark } }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--f-body); font-size: 16px; line-height: 1.5;
+  padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+.wrap { max-width: 980px; margin: 0 auto; padding-inline: 16px; padding-block: 20px 36px; display: grid; gap: 18px; }
+.eyebrow { font-family: var(--f-display); font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); font-size: 14px; }
+h1 { font-family: var(--f-display); font-weight: 700; font-size: clamp(30px, 7vw, 52px); line-height: 1; margin: 4px 0 0; text-wrap: balance; }
+h1 span { color: var(--accent); }
+.lede { color: var(--muted); max-width: 62ch; margin: 8px 0 0; }
+.stage { position: relative; background: var(--stage); border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+model-viewer { width: 100%; height: min(70vh, 640px); min-height: 440px; background: transparent; }
+.ar-btn { position: absolute; left: 50%; bottom: 18px; transform: translateX(-50%); display: inline-flex; align-items: center; gap: 8px;
+  border: 0; border-radius: 999px; padding: 14px 24px; background: var(--accent); color: var(--accent-fg); white-space: nowrap;
+  font-family: var(--f-display); font-weight: 700; font-size: 19px; letter-spacing: .04em; cursor: pointer; box-shadow: 0 4px 14px rgba(0,0,0,.2); }
+.ar-btn svg { width: 20px; height: 20px; }
+.ar-btn:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+.no-ar { position: absolute; left: 0; right: 0; bottom: 18px; text-align: center; color: var(--muted); font-size: 14px; padding-inline: 16px; }
+.sheet { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; }
+.plate { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 18px 20px; min-width: 0; }
+.plate h2 { font-family: var(--f-display); font-weight: 700; font-size: 20px; letter-spacing: .04em; text-transform: uppercase; margin: 0 0 10px; }
+dl { display: grid; grid-template-columns: auto 1fr; gap: 6px 16px; margin: 0; }
+dt { color: var(--muted); } dd { margin: 0; text-align: right; font-weight: 500; font-variant-numeric: tabular-nums; }
+ol { margin: 0; padding-left: 20px; display: grid; gap: 8px; }
+.inscription { font-family: var(--f-display); border-top: 1px solid var(--line); margin-top: 14px; padding-top: 12px; }
+.inscription b { display: block; font-size: 22px; letter-spacing: .06em; }
+.inscription small { color: var(--muted); font-family: var(--f-body); font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="eyebrow">MCC · Sponsor 2027</div>
+    <h1>Die goldene Nase für <span>BITO-Lagertechnik</span></h1>
+    <p class="lede">Tippe auf „Im Raum ansehen“ und stell das Podest in Originalgröße in deinen Raum.</p>
+  </header>
+
+  <div class="stage">
+    <model-viewer src="BITO_Sponsor_2027.glb" ios-src="BITO_Sponsor_2027.usdz"
+      alt="Anthrazit-Podest mit weißem BITO-Würfel, der sich um eine Goldstange dreht, darüber eine goldene Nase und ein Sponsorenschild"
+      autoplay camera-controls touch-action="pan-y" shadow-intensity="1" environment-image="neutral"
+      camera-orbit="30deg 78deg 3m" camera-target="0m 0.95m 0m" field-of-view="32deg"
+      ar ar-modes="webxr scene-viewer quick-look" ar-placement="floor" ar-scale="fixed">
+      <button slot="ar-button" class="ar-btn" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2 3 7v10l9 5 9-5V7z"/><path d="m3 7 9 5 9-5M12 12v10"/></svg>
+        Im Raum ansehen
+      </button>
+      <p class="no-ar" slot="ar-failure">AR ist auf diesem Gerät nicht verfügbar. Öffne die Seite auf einem Smartphone.</p>
+    </model-viewer>
+  </div>
+
+  <section class="sheet">
+    <div class="plate">
+      <h2>Das Podest</h2>
+      <dl>
+        <dt>Sockel</dt><dd>30 × 30 × 120 cm</dd>
+        <dt>Logo-Block</dt><dd>30 × 30 × 30 cm</dd>
+        <dt>Drehung</dt><dd>gegen Uhrzeigersinn, 8 s</dd>
+        <dt>Gesamthöhe</dt><dd>182 cm</dd>
+      </dl>
+      <div class="inscription">
+        <b>SPONSOR 2027</b>
+        <small>Der MCC und alle Besucher bedanken sich bei BITO-Lagertechnik Meisenheim</small>
+      </div>
+    </div>
+    <div class="plate">
+      <h2>So geht’s</h2>
+      <ol>
+        <li>„Im Raum ansehen“ tippen.</li>
+        <li>Handy langsam über den Boden schwenken, bis eine Fläche erkannt wird.</li>
+        <li>Podest platzieren und drumherum laufen.</li>
+      </ol>
+    </div>
+  </section>
+</div>
+</body>
+</html>
